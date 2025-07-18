@@ -1,28 +1,51 @@
-# Ignore Python cache
+# Node.js
+node_modules/
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Python
 __pycache__/
 *.py[cod]
-*.so
+*.pyo
+*.pyd
+*.pyc
+*.pkl
+*.ipynb_checkpoints/
+*.log
 
-# Ignore virtual environments
+# Jupyter Notebook metadata
+.ipynb_checkpoints
+
+# Python virtual environments (both Windows & Unix)
 venv/
 virt_env/
+ENV/
+env/
+.venv/
+.env/
+.ENV/
 
-# Ignore Jupyter Notebook checkpoints
-.ipynb_checkpoints/
+# VS Code settings
+.vscode/
+*.code-workspace
 
-# Ignore model and data files
-*.pkl
-*.csv
-
-# Ignore system files
+# OS-specific
 .DS_Store
 Thumbs.db
 
-# Ignore environment files
-.env
-
-# Ignore runtime files
-*.log
-
-# Ignore deployment metadata
+# Runtime files (specific to your project)
 runtime.txt
+diabetes.csv
+
+# Render-specific (optional safety)
+build/
+dist/
+*.tar.gz
+
+# Ignore model files if not needed in repo (you can upload them to Render Storage if large)
+lr.pkl
+nb.pkl
+scaler.pkl
